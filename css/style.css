@@ -1,3 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;600&display=swap');
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Brigh_Yellow: hsl(71, 73%, 54%);
+    --Light_Gray: #97dee1;
+    --Grayish_Blue: hsl(218, 22%, 67%);
+    --primary_font: 'Karla', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--primary_font);
+    font-size: 16px;
+    background-color: var(--Grayish_Blue);
+}
+
+/* Main */
+.main {
+    margin: 70px auto 70px;
+    width: 313px;
+    height: 730px;
+    border-radius: 8px;
+    background-color: white;
+    overflow: hidden;
+}
+
+/* Our */
+.our {
+    padding: 8px 24px 24px 24px;
+    height: 270px;
+}
+
+.our__title {
+    font-size: 1.2em;
+    color: var(--Cyan);
+    margin-top: 18px;
+}
+
+.our__subtitle {
+    color: var(--Brigh_Yellow);
+    font-size: 1em;
+    margin: 25px 0 10px 0;
+}
+
+.our__text {
+    color: var(--Grayish_Blue);
+    line-height: 27px;
+    font-size: 0.86em;
+    margin-top: 16px;
+}
+
+/* Subscrition */
+.subscrition {
+    background-color: var(--Cyan);
+    padding: 12px 24px 24px 24px;
+    height: 230px;
+    color: white;
+}
+
+.subscrition__title {
+    font-size: 1em;
+    margin-top: 10px;
+    margin-bottom: 18px;
+}
+
+.subscrition__price {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.subscrition__days {
+    margin-top: 8px;
+}
+
+.subscrition__btn {
+    margin-top: 30px;
+    width: 100%;
+    height: 48px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--Brigh_Yellow);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Why us */
+.why {
+    background-color: var(--Light_Gray);
+    padding: 8px 24px 24px 24px;
+    height: 230px;
+    color: white;
+}
+
+.why__title {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+li {
+    list-style: none;
+    line-height: 20px;
+    font-weight: 300;
+    font-size: 0.85em;
+    margin-left: 1px;
+}
+
 /* Header */
 .attribution {
     font-size: 11px; 
@@ -6,4 +120,49 @@
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries */
+/* >680px */
+@media only screen and (min-width: 680px) {
+    .main {
+        display: grid;
+        width: 636px;
+        height: 465px;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 160px auto 100px;
+    }
+
+    .our {
+        grid-column: 1/3;
+        padding: 20px 35px 35px 35px;
+        height: auto;
+    }
+
+    .our__title {
+        font-size: 1.45em;
+    }
+
+    .our__subtitle {
+        font-size: 1.1em;
+    }
+
+    .our__text {
+        font-size: 1em;
+        line-height: 27px;
+        margin-top: 8px;
+    }
+
+    .subscrition, .why {
+        padding: 20px 40px 40px 40px;
+        height: 258px;
+    }
+
+    .subscrition__title {
+        font-size: 1.1em;
+    }
+
+    .subscrition__days {
+        font-size: 0.95em;
+    }
 }
